@@ -1,0 +1,30 @@
+body{
+    background:url(../images/blue-and-cream-abstract-painting-1981468.jpg);
+    background-size:cover;
+    color:white;
+  
+}
+
+
+.ul{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+   
+}
+
+.ul li a{
+    color:white;
+    font-variant: small-caps;
+    font-size:25px;
+    letter-spacing: 2px;
+    
+}
+
+.title{
+    color:white;
+    font-variant: small-caps;
+    font-size:20px;
+    letter-spacing: 1px;;
+}
+
