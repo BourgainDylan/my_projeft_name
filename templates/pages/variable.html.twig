@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+
+    {% block content %}
+    {% set myvar, var2 = 'Hello', "bonjour" %}
+        <h1> Variable </h1>
+        <h2> ma variable contient :"{{ myvar ~ " et " ~ var2}}" </h2>
+
+    {% if existepas is defined %}
+
+        <h2>{{existepas}}</h2>
+
+        {% else %}
+
+        <h2> La variable n'existe pas </h2>
+
+    {% endif %}
+    {% endblock %}

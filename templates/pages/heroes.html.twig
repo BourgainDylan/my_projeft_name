@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <h1>liste des heroes:</h1>
+
+
+    <ul>
+        {# boucle tableau numéroté #}
+
+        {% for name in names %}
+
+                {% if  loop.index is odd %}
+                    <li style="background-color : lightgray">{{ name }}</li> 
+                {% else %}
+                    <li>{{ name }}</li>
+                {% endif %}
+
+        {% else %}
+
+            <li>Liste vides </li>
+        
+        {% endfor %}
+
+    </ul>
+
+
+        <h2>Description de héros </h2>
+
+        
+        {% for key, value in describe %}
+
+            <li> {{ key }}:  {{ value }} - {{ loop.index0 }} </li>
+
+        {% else %}
+
+            <li>Liste vides </li>
+        
+        {% endfor %}
+
+
+
+        <h2>Concaténation<h2>
+
+       <p> {{ describe.name | upper }} agé de {{describe.age}} et mesure {{describe.size | number_format(2, ",", ".")}} </p>
+
+
+
+ 
+
+
+
+
+{% endblock %}
